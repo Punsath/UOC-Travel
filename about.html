@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - TravelHive</title>
+    
+    <!-- Link to Google Fonts for a Beautiful Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #FF6F61;
+            --secondary-color: #03181D;
+            --accent-color: #FFD166;
+            --light-bg: #f7f7f7;
+            --dark-text: #333;
+            --light-text: #fff;
+            --gray-text: #777;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar Styles */
+        .naviBar {
+            background-color: var(--secondary-color);
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.5em;
+            color: var(--primary-color);
+            letter-spacing: 2px;
+        }
+
+        .naviLinks {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            gap: 25px;
+        }
+
+        .navItems {
+            margin: 0;
+        }
+
+        .navItems a {
+            color: var(--light-text);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 10px 15px;
+            display: block;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .navItems a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--primary-color);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .navItems a:hover {
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .navItems a:hover::after {
+            width: 80%;
+        }
+
+        .navItems a.active {
+            color: var(--primary-color);
+        }
+
+        .navItems a.active::after {
+            width: 80%;
+        }
+
+        /* Hero Section */
+        .about-hero {
+            height: 70vh;
+            background: linear-gradient(rgba(3, 24, 29, 0.7), rgba(3, 24, 29, 0.8)), 
+                        url('https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--light-text);
+            padding: 0 20px;
+        }
+
+        .about-hero h1 {
+            font-size: 4.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            font-family: 'Pacifico', cursive;
+        }
+
+        .about-hero p {
+            font-size: 1.4em;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Mission Section */
+        .mission-section {
+            padding: 100px 50px;
+            background-color: var(--light-bg);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .mission-content {
+            flex: 1;
+        }
+
+        .mission-content h2 {
+            font-size: 3em;
+            color: var(--secondary-color);
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .mission-content h2::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 4px;
+            background-color: var(--primary-color);
+            bottom: -10px;
+            left: 0;
+        }
+
+        .mission-content p {
+            font-size: 1.2em;
+            color: var(--gray-text);
+            margin-bottom: 30px;
+        }
+
+        .mission-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease;
+        }
+
+        .mission-image:hover {
+            transform: translateY(-10px);
+        }
+
+        .mission-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Values Section */
+        .values-section {
+            padding: 100px 50px;
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #0a2d36 100%);
+            color: var(--light-text);
+            text-align: center;
+        }
+
+        .values-section h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .values-section > p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            opacity: 0.9;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .value-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px 30px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, background 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .value-icon {
+            font-size: 3em;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .value-card h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .value-card p {
+            opacity: 0.9;
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 100px 50px;
+            background-color: var(--light-bg);
+            text-align: center;
+        }
+
+        .team-section h2 {
+            font-size: 3em;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .team-section > p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            color: var(--gray-text);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .member-image {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .team-member:hover .member-image img {
+            transform: scale(1.1);
+        }
+
+        .member-info {
+            padding: 25px 20px;
+        }
+
+        .member-info h3 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+            color: var(--secondary-color);
+        }
+
+        .member-info p {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .member-info .member-desc {
+            color: var(--gray-text);
+            font-size: 0.95em;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            padding: 80px 50px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #ff8a7a 100%);
+            color: var(--light-text);
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            padding: 30px 20px;
+        }
+
+        .stat-number {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 50px;
+            background: url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80') no-repeat center center/cover;
+            text-align: center;
+            color: var(--light-text);
+            position: relative;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(3, 24, 29, 0.8);
+            z-index: 1;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-section h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 111, 97, 0.4);
+        }
+
+        .cta-button:hover {
+            background-color: #ff5a4a;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 111, 97, 0.6);
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: var(--secondary-color);
+            color: var(--light-text);
+            padding: 80px 50px 40px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.5em;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .footer-socials a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+        }
+
+        .footer-socials a:hover {
+            background: var(--primary-color);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9em;
+            color: #ccc;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .mission-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .mission-content h2::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .naviBar {
+                padding: 15px 20px;
+            }
+            
+            .naviLinks {
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-hero h1 {
+                font-size: 3em;
+            }
+            
+            .about-hero p {
+                font-size: 1.1em;
+            }
+            
+            .mission-section, .values-section, .team-section, .stats-section, .cta-section {
+                padding: 60px 20px;
+            }
+            
+            .naviLinks {
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--secondary-color);
+                padding: 20px;
+                display: none;
+            }
+            
+            .naviBar {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="naviBar">
+        <div class="logo">
+            <span>TravelHive</span>
+        </div>
+        <ul class="naviLinks">
+            <li class="navItems"><a href="index.html">Home</a></li>
+            <li class="navItems"><a href="about.html" class="active">About Us</a></li>
+            <li class="navItems"><a href="contact.html">Contact Us</a></li>
+            <li class="navItems"><a href="province1.html">Province 1</a></li>
+            <li class="navItems"><a href="province2.html">Province 2</a></li>
+            <li class="navItems"><a href="province3.html">Province 3</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <h1>About TravelHive</h1>
+        <p>Discover the story behind our passion for travel and our commitment to creating unforgettable experiences</p>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <div class="mission-content">
+            <h2>Our Mission</h2>
+            <p>At TravelHive, we believe that travel has the power to transform lives, broaden perspectives, and create lasting memories. Our mission is to make extraordinary travel experiences accessible to everyone by providing carefully curated information, insider tips, and personalized recommendations.</p>
+            <p>We're dedicated to showcasing the hidden gems and iconic landmarks of each destination, helping travelers connect with local cultures and create meaningful journeys that go beyond typical tourism.</p>
+        </div>
+        <div class="mission-image">
+            <img src="https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Our Mission">
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <h2>Our Values</h2>
+        <p>These core principles guide everything we do at TravelHive</p>
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-globe-americas"></i>
+                </div>
+                <h3>Authenticity</h3>
+                <p>We strive to provide genuine, unfiltered travel experiences that reflect the true spirit of each destination.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-hand-holding-heart"></i>
+                </div>
+                <h3>Sustainability</h3>
+                <p>We promote responsible tourism that benefits local communities and preserves natural environments.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Community</h3>
+                <p>We believe in the power of shared experiences and building connections between travelers worldwide.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <h2>Meet Our Team</h2>
+        <p>The passionate travelers behind TravelHive</p>
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="member-image">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Team Member">
+                </div>
+                <div class="member-info">
+                    <h3>Michael Johnson</h3>
+                    <p>Founder & CEO</p>
+                    <p class="member-desc">With over 15 years of travel experience across 60+ countries, Michael founded TravelHive to share his passion for discovery.</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="member-image">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Team Member">
+                </div>
+                <div class="member-info">
+                    <h3>Sarah Williams</h3>
+                    <p>Head of Content</p>
+                    <p class="member-desc">Sarah combines her background in journalism with her love for adventure to create compelling travel stories.</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="member-image">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Team Member">
+                </div>
+                <div class="member-info">
+                    <h3>David Chen</h3>
+                    <p>Travel Expert</p>
+                    <p class="member-desc">David specializes in Asian destinations and has extensive knowledge of cultural traditions and hidden spots.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">50K+</div>
+                <div class="stat-label">Happy Travelers</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">120+</div>
+                <div class="stat-label">Destinations</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">15</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Satisfaction Rate</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Start Your Journey?</h2>
+            <p>Join thousands of travelers who have discovered the world with TravelHive. Let us help you plan your next unforgettable adventure.</p>
+            <a href="contact.html" class="cta-button">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>TravelHive</h3>
+                <p>Your trusted companion in discovering the world's most beautiful destinations and creating memories that last a lifetime.</p>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="province1.html">Province 1</a></li>
+                    <li><a href="province2.html">Province 2</a></li>
+                    <li><a href="province3.html">Province 3</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Travel Tips</a></li>
+                    <li><a href="#">Site Map</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Info</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Travel Street, Adventure City</li>
+                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-envelope"></i> info@travelhive.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 TravelHive. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--primary-color);"></i> for travelers</p>
+        </div>
+    </footer>
+
+</body>
+</html>
