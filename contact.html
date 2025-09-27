@@ -306,23 +306,23 @@
             transform: rotate(180deg);
         }
 
-        /* Footer Styles */
+        /* Footer Styles - FIXED */
         .footer {
-            background-color: #000000;
-            background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), 
+                        url('images/footercov.jpg') no-repeat center center;
             background-size: cover;
-            background-position: center;
             color: #fff;
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
             position: relative;
-            background-repeat: no-repeat;
         }
 
         .footer h3 {
-            font-size: 2em;
+            font-size: 2.5em;
             margin-bottom: 20px;
             z-index: 2;
+            font-family: 'Pacifico', cursive;
+            color: var(--primary-color);
         }
 
         .footer-links {
@@ -331,7 +331,8 @@
             margin: 0;
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
+            margin-bottom: 30px;
         }
 
         .footer-links a {
@@ -339,10 +340,11 @@
             text-decoration: none;
             font-size: 16px;
             z-index: 2;
+            transition: color 0.3s ease;
         }
 
         .footer-links a:hover {
-            color: #FF6F61;
+            color: var(--primary-color);
         }
 
         .footer-socials {
@@ -353,54 +355,25 @@
         .footer-socials a {
             color: #fff;
             font-size: 24px;
-            margin: 0 10px;
-            transition: color 0.3s ease;
+            margin: 0 15px;
+            transition: all 0.3s ease;
+            display: inline-block;
         }
 
         .footer-socials a:hover {
-            color: #FF6F61;
+            color: var(--primary-color);
+            transform: translateY(-5px);
         }
 
         .footer p {
-            margin-top: 20px;
+            margin-top: 30px;
             font-size: 14px;
             z-index: 2;
+            opacity: 0.8;
         }
 
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .naviBar {
-                padding: 15px 20px;
-                flex-direction: column;
-            }
 
-            .naviLinks {
-                margin-top: 15px;
-                gap: 15px;
-            }
-
-            .contact h2 {
-                font-size: 2.5em;
-            }
-
-            .contact-form-container {
-                flex-direction: column;
-            }
-
-            .contact-info, .contact-form {
-                width: 100%;
-                border-radius: 10px;
-                margin-bottom: 20px;
-            }
-
-            .contact-info {
-                border-radius: 10px 10px 0 0;
-            }
-
-            .contact-form {
-                border-radius: 0 0 10px 10px;
-            }
-        }
+       
     </style>
 </head>
 
@@ -415,18 +388,19 @@
             <li class="navItems"><a href="index.html"><b>Home</b></a></li>
             <li class="navItems"><a href="about.html"><b>About Us</b></a></li>
             <li class="navItems"><a href="contact.html"><b>Contact Us</b></a></li>
-            <li class="navItems"><a href="province1.html"><b>Province 1</b></a></li>
-            <li class="navItems"><a href="province2.html"><b>Province 2</b></a></li>
-            <li class="navItems"><a href="province3.html"><b>Province 3</b></a></li>
+             <li class="navItems"><a href="province1.html"><b>Destination One</b></a></li>
+            <li class="navItems"><a href="province2.html"><b>Destination Two</b></a></li>
+            <li class="navItems"><a href="province3.html"><b>Destination Three</b></a></li>
         </ul>
     </div>
 
     <!-- Contact Section -->
     <div class="contact">
         <div class="contact-content">
-            <h2>Contact Us</h2>
-            <p>If you have any questions or need assistance with your travel plans, feel free to reach out to us. Our team is here to help you create unforgettable travel experiences.</p>
-        </div>
+    <h2>Contact Us</h2>
+    <p>If you are a travel website, blog, or tourism service looking to reach more foreign tourists, get in touch with us. TravelHive is a completely free platform dedicated to promoting local travel businesses and hidden gems to a global audience.</p>
+</div>
+
         
         <!-- Contact Form and Info Container -->
         <div class="contact-form-container">
@@ -492,66 +466,72 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-container">
-            <div class="faq-item">
-                <div class="faq-question">
-                    How far in advance should I book my trip?
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>We recommend booking at least 2-3 months in advance for international trips and 1-2 months for domestic travel to secure the best deals and availability.</p>
-                </div>
+<!-- FAQ Section -->
+<section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-question">
+                How can TravelHive help my travel platform attract foreign tourists?
+                <i class="fas fa-chevron-down"></i>
             </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    What is your cancellation policy?
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Our cancellation policy varies depending on the type of booking. Generally, cancellations made 30 days or more before departure receive a full refund, minus a small processing fee.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    Do you offer travel insurance?
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Yes, we offer comprehensive travel insurance options that can be added to your booking. Our insurance covers trip cancellation, medical emergencies, lost luggage, and more.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    Can you customize travel packages?
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Absolutely! We specialize in creating personalized travel experiences. Contact our travel experts to discuss your preferences and we'll design a custom itinerary just for you.</p>
-                </div>
+            <div class="faq-answer">
+                <p>TravelHive promotes your platform to international audiences by showcasing unique destinations, hidden gems, and curated travel experiences—all completely free—helping you increase foreign tourist engagement.</p>
             </div>
         </div>
-    </section>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                Is there any cost to join TravelHive as a partner?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>No! TravelHive is a completely free welfare platform designed to support other travel websites in gaining more attention from foreign tourists.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                Can TravelHive improve my platform's visibility online?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Yes! We feature your platform on our network, share your content across social channels, and highlight your unique experiences to international travelers—completely free of charge.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                How does TravelHive ensure quality promotion for my platform?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>We carefully curate all featured destinations and experiences, ensuring high-quality promotion that meets international traveler expectations, without any cost to you.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!-- Footer Section -->
+
+
+          <!-- Footer Section -->
     <footer class="footer">
-        <h3>Contact Us</h3>
+        <h3>TravelHive</h3>
         <ul class="footer-links">
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Terms of Service</a></li>
             <li><a href="#">FAQ</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog</a></li>
         </ul>
         <div class="footer-socials">
             <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
             <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
         </div>
-        <p>&copy; 2023 TravelHive. All rights reserved.</p>
+        <p>&copy; 2025 TravelHive. All rights reserved. | Designed with ❤️ for travelers</p>
     </footer>
 
     <script>

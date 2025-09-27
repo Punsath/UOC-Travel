@@ -283,23 +283,23 @@
             color: #555;
         }
 
-        /* Footer Styles */
+      /* Footer Styles - FIXED */
         .footer {
-            background-color: #000000;
-            background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), 
+                        url('images/footercov.jpg') no-repeat center center;
             background-size: cover;
-            background-position: center;
             color: #fff;
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
             position: relative;
-            background-repeat: no-repeat;
         }
 
         .footer h3 {
-            font-size: 2em;
+            font-size: 2.5em;
             margin-bottom: 20px;
             z-index: 2;
+            font-family: 'Pacifico', cursive;
+            color: var(--primary-color);
         }
 
         .footer-links {
@@ -308,7 +308,8 @@
             margin: 0;
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
+            margin-bottom: 30px;
         }
 
         .footer-links a {
@@ -316,10 +317,11 @@
             text-decoration: none;
             font-size: 16px;
             z-index: 2;
+            transition: color 0.3s ease;
         }
 
         .footer-links a:hover {
-            color: #FF6F61;
+            color: var(--primary-color);
         }
 
         .footer-socials {
@@ -330,25 +332,29 @@
         .footer-socials a {
             color: #fff;
             font-size: 24px;
-            margin: 0 10px;
-            transition: color 0.3s ease;
+            margin: 0 15px;
+            transition: all 0.3s ease;
+            display: inline-block;
         }
 
         .footer-socials a:hover {
-            color: #FF6F61;
+            color: var(--primary-color);
+            transform: translateY(-5px);
         }
 
         .footer p {
-            margin-top: 20px;
+            margin-top: 30px;
             font-size: 14px;
             z-index: 2;
+            opacity: 0.8;
         }
+
 
               /* Hero Section */
         .about-hero {
             height: 70vh;
-            background: linear-gradient(rgba(3, 24, 29, 0.7), rgba(3, 24, 29, 0.8)), 
-                        url('https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80') no-repeat center center/cover;
+            background: 
+                        url('images/province1.jpg') no-repeat center center/cover;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -386,16 +392,16 @@
             <li class="navItems"><a href="index.html"><b>Home</b></a></li>
             <li class="navItems"><a href="about.html"><b>About Us</b></a></li>
             <li class="navItems"><a href="contact.html"><b>Contact Us</b></a></li>
-            <li class="navItems"><a href="province1.html"><b>Province 1</b></a></li>
-            <li class="navItems"><a href="province2.html"><b>Province 2</b></a></li>
-            <li class="navItems"><a href="province3.html"><b>Province 3</b></a></li>
+     <li class="navItems"><a href="province1.html"><b>Destination One</b></a></li>
+            <li class="navItems"><a href="province2.html"><b>Destination Two</b></a></li>
+            <li class="navItems"><a href="province3.html"><b>Destination Three</b></a></li>
         </ul>
     </div>
 
      <!-- Hero Section -->
     <section class="about-hero">
-        <h1>About TravelHive</h1>
-        <p>Discover the story behind our passion for travel and our commitment to creating unforgettable experiences</p>
+        <h1>Destination One</h1>
+        
     </section>
 
 
@@ -432,7 +438,7 @@
         <!-- Province Cards for Places -->
         <div class="province-cards">
             <div class="province-card">
-                <img src="images/nuwara_eliya.jpg" alt="Nuwara Eliya">
+                <img src="images/nuwaraeliya.jpg" alt="Nuwara Eliya">
                 <h4>Nuwara Eliya</h4>
                 <p>Known as "Little England", Nuwara Eliya offers colonial charm and a cool climate perfect for a getaway.</p>
             </div>
@@ -443,8 +449,8 @@
             </div>
             <div class="province-card">
                 <img src="images/adam_peak.jpg" alt="Adam's Peak">
-                <h4>Adam's Peak</h4>
-                <p>Ascend the sacred peak for a panoramic view of the island and a spiritual journey.</p>
+                <h4>Ramboda Falls</h4>
+                <p>A beautiful waterfall located in the heart of the tea plantations.</p>
             </div>
           
         </div>
@@ -537,7 +543,7 @@
                 <p>A historic city with sacred Buddhist sites, ancient temples, and stunning ruins.</p>
             </div>
             <div class="province-card">
-                <img src="images/sigiriya.jpg" alt="Sigiriya">
+                <img src="images/sigiriya.jpeg" alt="Sigiriya">
                 <h4>Sigiriya</h4>
                 <p>Explore the ancient rock fortress, a UNESCO World Heritage site and one of Sri Lanka's most iconic landmarks.</p>
             </div>
@@ -550,20 +556,24 @@
         </div>
     </div>
 
-    <!-- Footer Section -->
+          <!-- Footer Section -->
     <footer class="footer">
-        <h3>Contact Us</h3>
+        <h3>TravelHive</h3>
         <ul class="footer-links">
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Terms of Service</a></li>
             <li><a href="#">FAQ</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog</a></li>
         </ul>
         <div class="footer-socials">
             <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
             <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
         </div>
-        <p>&copy; 2023 Travel Website. All rights reserved.</p>
+        <p>&copy; 2025 TravelHive. All rights reserved. | Designed with ❤️ for travelers</p>
     </footer>
 
     <script>

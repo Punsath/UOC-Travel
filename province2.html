@@ -283,23 +283,23 @@
             color: #555;
         }
 
-        /* Footer Styles */
+        /* Footer Styles - FIXED */
         .footer {
-            background-color: #000000;
-            background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), 
+                        url('images/footercov.jpg') no-repeat center center;
             background-size: cover;
-            background-position: center;
             color: #fff;
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
             position: relative;
-            background-repeat: no-repeat;
         }
 
         .footer h3 {
-            font-size: 2em;
+            font-size: 2.5em;
             margin-bottom: 20px;
             z-index: 2;
+            font-family: 'Pacifico', cursive;
+            color: var(--primary-color);
         }
 
         .footer-links {
@@ -308,7 +308,8 @@
             margin: 0;
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
+            margin-bottom: 30px;
         }
 
         .footer-links a {
@@ -316,10 +317,11 @@
             text-decoration: none;
             font-size: 16px;
             z-index: 2;
+            transition: color 0.3s ease;
         }
 
         .footer-links a:hover {
-            color: #FF6F61;
+            color: var(--primary-color);
         }
 
         .footer-socials {
@@ -330,25 +332,27 @@
         .footer-socials a {
             color: #fff;
             font-size: 24px;
-            margin: 0 10px;
-            transition: color 0.3s ease;
+            margin: 0 15px;
+            transition: all 0.3s ease;
+            display: inline-block;
         }
 
         .footer-socials a:hover {
-            color: #FF6F61;
+            color: var(--primary-color);
+            transform: translateY(-5px);
         }
 
         .footer p {
-            margin-top: 20px;
+            margin-top: 30px;
             font-size: 14px;
             z-index: 2;
+            opacity: 0.8;
         }
-
               /* Hero Section */
         .about-hero {
             height: 70vh;
-            background: linear-gradient(rgba(3, 24, 29, 0.7), rgba(3, 24, 29, 0.8)), 
-                        url('https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80') no-repeat center center/cover;
+            background: 
+                        url('images/Province2.jpg') no-repeat center center/cover;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -386,184 +390,184 @@
             <li class="navItems"><a href="index.html"><b>Home</b></a></li>
             <li class="navItems"><a href="about.html"><b>About Us</b></a></li>
             <li class="navItems"><a href="contact.html"><b>Contact Us</b></a></li>
-            <li class="navItems"><a href="province1.html"><b>Province 1</b></a></li>
-            <li class="navItems"><a href="province2.html"><b>Province 2</b></a></li>
-            <li class="navItems"><a href="province3.html"><b>Province 3</b></a></li>
+             <li class="navItems"><a href="province1.html"><b>Destination One</b></a></li>
+            <li class="navItems"><a href="province2.html"><b>Destination Two</b></a></li>
+            <li class="navItems"><a href="province3.html"><b>Destination Three</b></a></li>
         </ul>
     </div>
 
      <!-- Hero Section -->
     <section class="about-hero">
-        <h1>About TravelHive</h1>
-        <p>Discover the story behind our passion for travel and our commitment to creating unforgettable experiences</p>
+        <h1>Destination Two</h1>
+        
     </section>
 
-
-
-    <!-- Central Province Section -->
+    <!-- Northern Province Section -->
     <div class="province-section">
-        <h2 class="province-header">Central Province</h2>
+        <h2 class="province-header">Northern Province</h2>
         <p class="province-description">
-            Central Province is famous for its cool climate, lush tea gardens, and scenic hill stations. It's home to Sri Lanka's iconic attractions such as the stunning Nuwara Eliya, the picturesque Kandy, and the lush Horton Plains National Park. A paradise for nature lovers, adventure seekers, and those wanting to escape the heat of the lowlands.
+            The Northern Province of Sri Lanka is rich in history, culture, and natural beauty. Known for its pristine beaches, ancient temples, and unique Tamil culture, this region offers a distinct experience from the rest of the island. Jaffna, the capital, is famous for its colonial architecture and vibrant local markets.
         </p>
 
         <div class="province-info">
             <h3>Top 5 Places to Visit</h3>
             <ul>
-                <li><strong>Nuwara Eliya</strong> - Known as "Little England", with its colonial charm and cool climate.</li>
-                <li><strong>Kandy</strong> - The cultural capital, home to the Temple of the Tooth.</li>
-                <li><strong>Horton Plains</strong> - Known for the stunning World's End and diverse wildlife.</li>
-                <li><strong>Adam's Peak</strong> - A sacred mountain with panoramic views of the surrounding landscape.</li>
-                <li><strong>Ramboda Falls</strong> - A beautiful waterfall located in the heart of the tea plantations.</li>
+                <li><strong>Jaffna Fort</strong> - A 17th-century fort built by the Portuguese and later expanded by the Dutch.</li>
+                <li><strong>Nallur Kandaswamy Kovil</strong> - One of the most significant Hindu temples in Jaffna.</li>
+                <li><strong>Nagadeepa Purana Vihara</strong> - An ancient Buddhist temple located on Nainativu Island.</li>
+                <li><strong>Point Pedro</strong> - The northernmost point of Sri Lanka with beautiful beaches and lighthouses.</li>
+                <li><strong>Keerimalai Springs</strong> - Natural freshwater springs with historical and religious significance.</li>
             </ul>
         </div>
 
         <div class="province-info">
             <h3>Top 5 Hotels</h3>
             <ul>
-                <li><strong>The Grand Hotel, Nuwara Eliya</strong> - A charming hotel offering colonial-style accommodation in the heart of Nuwara Eliya.</li>
-                <li><strong>Kandy Lake View Hotel</strong> - Overlooking Kandy Lake, a relaxing place to stay near the city center.</li>
-                <li><strong>Horton Plains Holiday Bungalow</strong> - Ideal for nature lovers, located near Horton Plains National Park.</li>
-                <li><strong>Tea Factory Hotel</strong> - A unique stay in a converted tea factory, offering a vintage experience in the hill country.</li>
-                <li><strong>Ramboda Falls Hotel</strong> - Nestled amidst tea plantations and waterfalls, a serene getaway in the Central Province.</li>
+                <li><strong>Jetwing Jaffna</strong> - A modern hotel offering comfortable accommodations in the heart of Jaffna.</li>
+                <li><strong>The Thinnai</strong> - A boutique hotel showcasing traditional Jaffna architecture and hospitality.</li>
+                <li><strong>Heritage Hotel</strong> - Located near Jaffna Fort, offering convenient access to major attractions.</li>
+                <li><strong>Green Grass Hotel</strong> - A budget-friendly option with clean rooms and friendly service.</li>
+                <li><strong>Palm Garden Hotel</strong> - Set amidst lush gardens, providing a peaceful retreat in Jaffna.</li>
             </ul>
         </div>
 
         <!-- Province Cards for Places -->
         <div class="province-cards">
             <div class="province-card">
-                <img src="images/nuwara_eliya.jpg" alt="Nuwara Eliya">
-                <h4>Nuwara Eliya</h4>
-                <p>Known as "Little England", Nuwara Eliya offers colonial charm and a cool climate perfect for a getaway.</p>
+                <img src="images/jaffna_fort.jpg" alt="Jaffna Fort">
+                <h4>Jaffna Fort</h4>
+                <p>Explore this historic fort that showcases the colonial history of Northern Sri Lanka.</p>
             </div>
             <div class="province-card">
-                <img src="images/horton_plains.jpg" alt="Horton Plains">
-                <h4>Horton Plains</h4>
-                <p>Visit Horton Plains National Park and enjoy the breathtaking views of the World's End cliff.</p>
+                <img src="images/nallur_kovil.jpg" alt="Nallur Kandaswamy Kovil">
+                <h4>Nallur Kovil</h4>
+                <p>Visit this magnificent Hindu temple known for its grand architecture and religious significance.</p>
             </div>
             <div class="province-card">
-                <img src="images/adam_peak.jpg" alt="Adam's Peak">
+                <img src="images/point_pedro.jpg" alt="Point Pedro">
+                <h4>Point Pedro</h4>
+                <p>Experience the northernmost point of Sri Lanka with its scenic beaches and lighthouses.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- North Western Province Section -->
+    <div class="province-section">
+        <h2 class="province-header">North Western Province</h2>
+        <p class="province-description">
+            The North Western Province is known for its diverse attractions ranging from ancient Buddhist monasteries to beautiful coastal areas. It's home to the sacred city of Anuradhapura, the wildlife-rich Wilpattu National Park, and the picturesque coastal town of Kalpitiya, famous for dolphin watching and kitesurfing.
+        </p>
+
+        <div class="province-info">
+            <h3>Top 5 Places to Visit</h3>
+         <ul>
+    <li><strong>Yapahuwa</strong> - An ancient rock fortress and former capital of Sri Lanka with stunning stone stairways and ruins.</li>
+    <li><strong>Wilpattu National Park</strong> - Sri Lanka's largest national park, known for its leopard population.</li>
+    <li><strong>Kalpitiya</strong> - A coastal paradise ideal for dolphin watching, kitesurfing, and beach activities.</li>
+    <li><strong>Chilaw</strong> - A coastal town famous for its lagoons, fishing culture, and Munneswaram Temple.</li>
+    <li><strong>Puttalam</strong> - A coastal town known for its salt production and lagoon ecosystem.</li>
+</ul>
+
+        </div>
+
+        <div class="province-info">
+            <h3>Top 5 Hotels</h3>
+            <ul>
+                <li><strong>Ulagalla Resort</strong> - A luxury eco-resort set in a 150-year-old mansion near Anuradhapura.</li>
+                <li><strong>Palm Garden Village</strong> - A beachfront resort in Kalpitiya offering water sports and relaxation.</li>
+                <li><strong>Heritage Hotel Anuradhapura</strong> - Located close to the ancient city, perfect for history enthusiasts.</li>
+                <li><strong>Wilpattu Safari Camp</strong> - An authentic camping experience near Wilpattu National Park.</li>
+                <li><strong>Dolphin Beach Resort</strong> - Situated in Kalpitiya, ideal for dolphin watching and beach activities.</li>
+            </ul>
+        </div>
+
+        <!-- Province Cards for Places -->
+        <div class="province-cards">
+            <div class="province-card">
+        <img src="images/yapahuwa.jpg" alt="Yapahuwa Rock Fortress">
+        <h4>Yapahuwa Rock Fortress</h4>
+        <p>Discover the ancient rock fortress, once a royal capital, with stunning stone stairways and ruins.</p>
+    </div>
+            <div class="province-card">
+                <img src="images/wilpattu.jpg" alt="Wilpattu National Park">
+                <h4>Wilpattu National Park</h4>
+                <p>Go on a safari to spot leopards, elephants, and diverse wildlife in their natural habitat.</p>
+            </div>
+            <div class="province-card">
+                <img src="images/kalpitiya.jpg" alt="Kalpitiya">
+                <h4>Kalpitiya</h4>
+                <p>Enjoy water sports, dolphin watching, and beautiful beaches in this coastal paradise.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sabaragamuwa Province Section -->
+    <div class="province-section">
+        <h2 class="province-header">Sabaragamuwa Province</h2>
+        <p class="province-description">
+            Sabaragamuwa Province is renowned for its gem mines, lush rainforests, and breathtaking waterfalls. The province is home to Sinharaja Forest Reserve, a UNESCO World Heritage Site, and the sacred Adam's Peak, a pilgrimage site for multiple religions. The region also boasts numerous tea plantations and spice gardens.
+        </p>
+
+        <div class="province-info">
+            <h3>Top 5 Places to Visit</h3>
+            <ul>
+                <li><strong>Adam's Peak (Sri Pada)</strong> - A sacred mountain and popular pilgrimage site with a distinctive footprint-shaped rock.</li>
+                <li><strong>Sinharaja Forest Reserve</strong> - A UNESCO World Heritage Site and biodiversity hotspot.</li>
+                <li><strong>Belihuloya</strong> - A scenic hill station known for its beautiful landscapes and adventure activities.</li>
+                <li><strong>Ratnapura</strong> - The "City of Gems," famous for its gem mines and gemological museums.</li>
+                <li><strong>Bopath Falls</strong> - A beautiful waterfall shaped like a Bo leaf, located near Ratnapura.</li>
+            </ul>
+        </div>
+
+        <div class="province-info">
+            <h3>Top 5 Hotels</h3>
+            <ul>
+                <li><strong>Rainforest Edge</strong> - An eco-lodge located near Sinharaja Forest Reserve.</li>
+                <li><strong>Stafford Bungalow</strong> - A colonial-era bungalow offering luxury accommodations near Adam's Peak.</li>
+                <li><strong>Ratnapura Rest House</strong> - A historic hotel with views of the surrounding hills and gem mines.</li>
+                <li><strong>Belihuloya Hotel</b> - A comfortable stay option in the picturesque hill station of Belihuloya.</li>
+                <li><strong>Gem River Resort</strong> - Located near Ratnapura, offering a peaceful retreat amidst nature.</li>
+            </ul>
+        </div>
+
+        <!-- Province Cards for Places -->
+        <div class="province-cards">
+            <div class="province-card">
+                <img src="images/adams_peak.jpg" alt="Adam's Peak">
                 <h4>Adam's Peak</h4>
-                <p>Ascend the sacred peak for a panoramic view of the island and a spiritual journey.</p>
-            </div>
-          
-        </div>
-    </div>
-
-    <!-- Eastern Province Section -->
-    <div class="province-section">
-        <h2 class="province-header">Eastern Province</h2>
-        <p class="province-description">
-            Eastern Province boasts Sri Lanka's most pristine beaches, bustling markets, and an incredible mix of cultural influences. The tranquil coastline with its golden sands, the historical town of Batticaloa, and the beautiful Trincomalee are some of the highlights in the region.
-        </p>
-
-        <div class="province-info">
-            <h3>Top 5 Places to Visit</h3>
-            <ul>
-                <li><strong>Trincomalee</strong> - Known for its stunning beaches and vibrant maritime history.</li>
-                <li><strong>Passikudah</strong> - Famous for its shallow and warm waters, ideal for relaxation.</li>
-                <li><strong>Batticaloa</strong> - A mix of cultural influences and beautiful lagoons.</li>
-                <li><strong>Arugam Bay</strong> - A popular destination for surfers and beach lovers.</li>
-                <li><strong>Kanniya Hot Springs</strong> - A natural hot spring believed to have healing properties.</li>
-            </ul>
-        </div>
-
-        <div class="province-info">
-            <h3>Top 5 Hotels</h3>
-            <ul>
-                <li><strong>Uga Bay</strong> - A luxury resort located on the beautiful Passikudah beach.</li>
-                <li><strong>Trinco Blu by Cinnamon</strong> - A beachside hotel offering modern amenities and stunning ocean views.</li>
-                <li><strong>Amethyst Resort</strong> - A serene escape in Trincomalee with all-inclusive services.</li>
-                <li><strong>Shakti Vani</strong> - An eco-friendly resort near the beach, offering peace and tranquility.</li>
-                <li><strong>Sea Lotus Park Hotel</strong> - A family-friendly hotel located near the eastern coastline, perfect for a beach getaway.</li>
-            </ul>
-        </div>
-
-        <!-- Province Cards for Places -->
-        <div class="province-cards">
-            <div class="province-card">
-                <img src="images/trincomalee.jpg" alt="Trincomalee">
-                <h4>Trincomalee</h4>
-                <p>Explore the beautiful beaches and historical forts of Trincomalee, a paradise for nature lovers.</p>
+                <p>Climb this sacred mountain for a spiritual experience and breathtaking sunrise views.</p>
             </div>
             <div class="province-card">
-                <img src="images/passikudah.jpg" alt="Passikudah">
-                <h4>Passikudah</h4>
-                <p>Enjoy the clear waters and peaceful atmosphere at Passikudah, perfect for a beach holiday.</p>
+                <img src="images/sinharaja.jpeg" alt="Sinharaja Forest">
+                <h4>Sinharaja Forest</h4>
+                <p>Explore this UNESCO World Heritage rainforest with its rich biodiversity and endemic species.</p>
             </div>
             <div class="province-card">
-                <img src="images/arugam_bay.jpg" alt="Arugam Bay">
-                <h4>Arugam Bay</h4>
-                <p>A world-renowned surf destination with pristine beaches and vibrant nightlife.</p>
+                <img src="images/ratnapura.jpg" alt="Ratnapura">
+                <h4>Ratnapura</h4>
+                <p>Discover the "City of Gems" and learn about Sri Lanka's famous gem mining industry.</p>
             </div>
-     
-        </div>
-    </div>
-
-    <!-- North Central Province Section -->
-    <div class="province-section">
-        <h2 class="province-header">North Central Province</h2>
-        <p class="province-description">
-            North Central Province is home to Sri Lanka's ancient capitals, including Anuradhapura and Polonnaruwa, with numerous archaeological sites and historical monuments.
-        </p>
-
-        <div class="province-info">
-            <h3>Top 5 Places to Visit</h3>
-            <ul>
-                <li><strong>Anuradhapura</strong> - A UNESCO World Heritage city with ancient Buddhist temples and stupas.</li>
-                <li><strong>Sigiriya</strong> - An ancient rock fortress and one of Sri Lanka's most iconic landmarks.</li>
-                <li><strong>Polonnaruwa</strong> - A well-preserved ancient city with Buddhist monuments and ruins.</li>
-                <li><strong>Ritigala</strong> - An ancient monastery and nature reserve.</li>
-                <li><strong>Mihintale</strong> - The birthplace of Buddhism in Sri Lanka, with historical ruins and sacred sites.</li>
-            </ul>
-        </div>
-
-        <div class="province-info">
-            <h3>Top 5 Hotels</h3>
-            <ul>
-                <li><strong>Heritance Kandalama</strong> - A luxury hotel located by the Kandalama Lake with eco-friendly design.</li>
-                <li><strong>Fresco Water Villa</strong> - A charming resort overlooking the tranquil waters of the lake.</li>
-                <li><strong>Rajarata Hotel</strong> - A perfect base to explore Anuradhapura and its ancient sites.</li>
-                <li><strong>Lake View Hotel</strong> - A serene getaway near the Anuradhapura Lake.</li>
-                <li><strong>Wildlife Resort</strong> - A unique experience near the Minneriya National Park, perfect for nature lovers.</li>
-            </ul>
-        </div>
-
-        <!-- Province Cards for Places -->
-        <div class="province-cards">
-            <div class="province-card">
-                <img src="images/anuradhapura.jpg" alt="Anuradhapura">
-                <h4>Anuradhapura</h4>
-                <p>A historic city with sacred Buddhist sites, ancient temples, and stunning ruins.</p>
-            </div>
-            <div class="province-card">
-                <img src="images/sigiriya.jpg" alt="Sigiriya">
-                <h4>Sigiriya</h4>
-                <p>Explore the ancient rock fortress, a UNESCO World Heritage site and one of Sri Lanka's most iconic landmarks.</p>
-            </div>
-            <div class="province-card">
-                <img src="images/polonnaruwa.jpg" alt="Polonnaruwa">
-                <h4>Polonnaruwa</h4>
-                <p>Visit the UNESCO-listed ancient city, known for its preserved ruins and historical significance.</p>
-            </div>
-        
         </div>
     </div>
 
     <!-- Footer Section -->
     <footer class="footer">
-        <h3>Contact Us</h3>
+        <h3>TravelHive</h3>
         <ul class="footer-links">
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Terms of Service</a></li>
             <li><a href="#">FAQ</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog</a></li>
         </ul>
         <div class="footer-socials">
             <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
             <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
         </div>
-        <p>&copy; 2023 Travel Website. All rights reserved.</p>
+        <p>&copy; 2025 TravelHive. All rights reserved. | Designed with ❤️ for travelers</p>
     </footer>
 
     <script>

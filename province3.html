@@ -283,23 +283,23 @@
             color: #555;
         }
 
-        /* Footer Styles */
+      /* Footer Styles - FIXED */
         .footer {
-            background-color: #000000;
-            background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), 
+                        url('images/footercov.jpg') no-repeat center center;
             background-size: cover;
-            background-position: center;
             color: #fff;
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
             position: relative;
-            background-repeat: no-repeat;
         }
 
         .footer h3 {
-            font-size: 2em;
+            font-size: 2.5em;
             margin-bottom: 20px;
             z-index: 2;
+            font-family: 'Pacifico', cursive;
+            color: var(--primary-color);
         }
 
         .footer-links {
@@ -308,7 +308,8 @@
             margin: 0;
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
+            margin-bottom: 30px;
         }
 
         .footer-links a {
@@ -316,10 +317,11 @@
             text-decoration: none;
             font-size: 16px;
             z-index: 2;
+            transition: color 0.3s ease;
         }
 
         .footer-links a:hover {
-            color: #FF6F61;
+            color: var(--primary-color);
         }
 
         .footer-socials {
@@ -330,25 +332,28 @@
         .footer-socials a {
             color: #fff;
             font-size: 24px;
-            margin: 0 10px;
-            transition: color 0.3s ease;
+            margin: 0 15px;
+            transition: all 0.3s ease;
+            display: inline-block;
         }
 
         .footer-socials a:hover {
-            color: #FF6F61;
+            color: var(--primary-color);
+            transform: translateY(-5px);
         }
 
         .footer p {
-            margin-top: 20px;
+            margin-top: 30px;
             font-size: 14px;
             z-index: 2;
+            opacity: 0.8;
         }
 
               /* Hero Section */
         .about-hero {
             height: 70vh;
-            background: linear-gradient(rgba(3, 24, 29, 0.7), rgba(3, 24, 29, 0.8)), 
-                        url('https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80') no-repeat center center/cover;
+            background: 
+                        url('images/Province3.jpg') no-repeat center center/cover;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -386,184 +391,183 @@
             <li class="navItems"><a href="index.html"><b>Home</b></a></li>
             <li class="navItems"><a href="about.html"><b>About Us</b></a></li>
             <li class="navItems"><a href="contact.html"><b>Contact Us</b></a></li>
-            <li class="navItems"><a href="province1.html"><b>Province 1</b></a></li>
-            <li class="navItems"><a href="province2.html"><b>Province 2</b></a></li>
-            <li class="navItems"><a href="province3.html"><b>Province 3</b></a></li>
+              <li class="navItems"><a href="province1.html"><b>Destination One</b></a></li>
+            <li class="navItems"><a href="province2.html"><b>Destination Two</b></a></li>
+            <li class="navItems"><a href="province3.html"><b>Destination Three</b></a></li>
         </ul>
     </div>
 
      <!-- Hero Section -->
     <section class="about-hero">
-        <h1>About TravelHive</h1>
-        <p>Discover the story behind our passion for travel and our commitment to creating unforgettable experiences</p>
+        <h1>Destination Three</h1>
+       
     </section>
 
-
-
-    <!-- Central Province Section -->
+    <!-- Southern Province Section -->
     <div class="province-section">
-        <h2 class="province-header">Central Province</h2>
+        <h2 class="province-header">Southern Province</h2>
         <p class="province-description">
-            Central Province is famous for its cool climate, lush tea gardens, and scenic hill stations. It's home to Sri Lanka's iconic attractions such as the stunning Nuwara Eliya, the picturesque Kandy, and the lush Horton Plains National Park. A paradise for nature lovers, adventure seekers, and those wanting to escape the heat of the lowlands.
+            The Southern Province of Sri Lanka is renowned for its beautiful beaches, rich history, and vibrant culture. From the colonial architecture of Galle to the pristine beaches of Mirissa and the wildlife of Yala National Park, this region offers diverse experiences for every traveler.
         </p>
 
         <div class="province-info">
             <h3>Top 5 Places to Visit</h3>
             <ul>
-                <li><strong>Nuwara Eliya</strong> - Known as "Little England", with its colonial charm and cool climate.</li>
-                <li><strong>Kandy</strong> - The cultural capital, home to the Temple of the Tooth.</li>
-                <li><strong>Horton Plains</strong> - Known for the stunning World's End and diverse wildlife.</li>
-                <li><strong>Adam's Peak</strong> - A sacred mountain with panoramic views of the surrounding landscape.</li>
-                <li><strong>Ramboda Falls</strong> - A beautiful waterfall located in the heart of the tea plantations.</li>
+                <li><strong>Galle Fort</strong> - A UNESCO World Heritage Site with well-preserved colonial architecture.</li>
+                <li><strong>Yala National Park</strong> - Famous for its leopard population and diverse wildlife.</li>
+                <li><strong>Mirissa Beach</strong> - A beautiful beach known for whale watching and surfing.</li>
+                <li><strong>Unawatuna Beach</strong> - A popular beach destination with calm waters and coral reefs.</li>
+                <li><strong>Hikkaduwa Beach</strong> - Famous for its coral sanctuary and vibrant nightlife.</li>
             </ul>
         </div>
 
         <div class="province-info">
             <h3>Top 5 Hotels</h3>
             <ul>
-                <li><strong>The Grand Hotel, Nuwara Eliya</strong> - A charming hotel offering colonial-style accommodation in the heart of Nuwara Eliya.</li>
-                <li><strong>Kandy Lake View Hotel</strong> - Overlooking Kandy Lake, a relaxing place to stay near the city center.</li>
-                <li><strong>Horton Plains Holiday Bungalow</strong> - Ideal for nature lovers, located near Horton Plains National Park.</li>
-                <li><strong>Tea Factory Hotel</strong> - A unique stay in a converted tea factory, offering a vintage experience in the hill country.</li>
-                <li><strong>Ramboda Falls Hotel</strong> - Nestled amidst tea plantations and waterfalls, a serene getaway in the Central Province.</li>
+                <li><strong>Jetwing Lighthouse</strong> - A luxury hotel in Galle designed by Geoffrey Bawa.</li>
+                <li><strong>Cinnamon Bey Beruwala</strong> - A beachfront resort offering luxury accommodations.</li>
+                <li><strong>Anantara Peace Haven Tangalle</strong> - A luxury resort set on a secluded beach.</li>
+                <li><strong>Heritance Ahungalla</strong> - A unique hotel with stunning architecture and beach access.</li>
+                <li><strong>Tri Lanka</strong> - An eco-luxury resort overlooking Koggala Lake.</li>
             </ul>
         </div>
 
         <!-- Province Cards for Places -->
         <div class="province-cards">
             <div class="province-card">
-                <img src="images/nuwara_eliya.jpg" alt="Nuwara Eliya">
-                <h4>Nuwara Eliya</h4>
-                <p>Known as "Little England", Nuwara Eliya offers colonial charm and a cool climate perfect for a getaway.</p>
+                <img src="images/galle_fort.jpg" alt="Galle Fort">
+                <h4>Galle Fort</h4>
+                <p>Explore the historic Dutch fort with its charming streets, boutiques, and cafes.</p>
             </div>
             <div class="province-card">
-                <img src="images/horton_plains.jpg" alt="Horton Plains">
-                <h4>Horton Plains</h4>
-                <p>Visit Horton Plains National Park and enjoy the breathtaking views of the World's End cliff.</p>
+                <img src="images/yala_park.jpg" alt="Yala National Park">
+                <h4>Yala National Park</h4>
+                <p>Go on a safari to spot leopards, elephants, and diverse bird species.</p>
             </div>
             <div class="province-card">
-                <img src="images/adam_peak.jpg" alt="Adam's Peak">
-                <h4>Adam's Peak</h4>
-                <p>Ascend the sacred peak for a panoramic view of the island and a spiritual journey.</p>
+                <img src="images/mirissa_beach.jpg" alt="Mirissa Beach">
+                <h4>Mirissa Beach</h4>
+                <p>Relax on this beautiful beach or go whale watching in the deep blue waters.</p>
             </div>
-          
         </div>
     </div>
 
-    <!-- Eastern Province Section -->
+    <!-- Uva Province Section -->
     <div class="province-section">
-        <h2 class="province-header">Eastern Province</h2>
+        <h2 class="province-header">Uva Province</h2>
         <p class="province-description">
-            Eastern Province boasts Sri Lanka's most pristine beaches, bustling markets, and an incredible mix of cultural influences. The tranquil coastline with its golden sands, the historical town of Batticaloa, and the beautiful Trincomalee are some of the highlights in the region.
+            Uva Province is known for its scenic beauty, tea plantations, and cool climate. Located in the southeastern part of the hill country, it offers breathtaking landscapes, waterfalls, and opportunities for adventure activities like hiking and trekking.
         </p>
 
         <div class="province-info">
             <h3>Top 5 Places to Visit</h3>
             <ul>
-                <li><strong>Trincomalee</strong> - Known for its stunning beaches and vibrant maritime history.</li>
-                <li><strong>Passikudah</strong> - Famous for its shallow and warm waters, ideal for relaxation.</li>
-                <li><strong>Batticaloa</strong> - A mix of cultural influences and beautiful lagoons.</li>
-                <li><strong>Arugam Bay</strong> - A popular destination for surfers and beach lovers.</li>
-                <li><strong>Kanniya Hot Springs</strong> - A natural hot spring believed to have healing properties.</li>
+                <li><strong>Ella</strong> - A picturesque hill town with stunning views and hiking trails.</li>
+                <li><strong>Diyaluma Falls</strong> - Sri Lanka's second highest waterfall, perfect for hiking and swimming.</li>
+                <li><strong>Badulla</strong> - The capital of Uva Province with historical and cultural significance.</li>
+                <li><strong>Haputale</strong> - A hill station offering panoramic views of the surrounding valleys.</li>
+                <li><strong>Lipton's Seat</strong> - A viewpoint where Sir Thomas Lipton monitored his tea plantations.</li>
             </ul>
         </div>
 
         <div class="province-info">
             <h3>Top 5 Hotels</h3>
             <ul>
-                <li><strong>Uga Bay</strong> - A luxury resort located on the beautiful Passikudah beach.</li>
-                <li><strong>Trinco Blu by Cinnamon</strong> - A beachside hotel offering modern amenities and stunning ocean views.</li>
-                <li><strong>Amethyst Resort</strong> - A serene escape in Trincomalee with all-inclusive services.</li>
-                <li><strong>Shakti Vani</strong> - An eco-friendly resort near the beach, offering peace and tranquility.</li>
-                <li><strong>Sea Lotus Park Hotel</strong> - A family-friendly hotel located near the eastern coastline, perfect for a beach getaway.</li>
+                <li><strong>98 Acres Resort & Spa</strong> - A luxury eco-resort in Ella with stunning views.</li>
+                <li><strong>Ella Jungle Resort</strong> - A unique accommodation nestled in the jungle near Ella.</li>
+                <li><strong>Grand Ella Hotel</strong> - A comfortable hotel with beautiful mountain views.</li>
+                <li><strong>Haputale Bungalow</strong> - A colonial-era bungalow offering a vintage experience.</li>
+                <li><strong>Tea Country Inn</strong> - A cozy hotel surrounded by tea plantations in Haputale.</li>
             </ul>
         </div>
 
         <!-- Province Cards for Places -->
         <div class="province-cards">
             <div class="province-card">
-                <img src="images/trincomalee.jpg" alt="Trincomalee">
-                <h4>Trincomalee</h4>
-                <p>Explore the beautiful beaches and historical forts of Trincomalee, a paradise for nature lovers.</p>
+                <img src="images/ella_rock.jpg" alt="Ella Rock">
+                <h4>Ella Rock</h4>
+                <p>Hike to the top of Ella Rock for breathtaking views of the surrounding landscape.</p>
             </div>
             <div class="province-card">
-                <img src="images/passikudah.jpg" alt="Passikudah">
-                <h4>Passikudah</h4>
-                <p>Enjoy the clear waters and peaceful atmosphere at Passikudah, perfect for a beach holiday.</p>
+                <img src="images/diyaluma_falls.jpg" alt="Diyaluma Falls">
+                <h4>Diyaluma Falls</h4>
+                <p>Visit Sri Lanka's second highest waterfall and enjoy natural pools at the top.</p>
             </div>
             <div class="province-card">
-                <img src="images/arugam_bay.jpg" alt="Arugam Bay">
-                <h4>Arugam Bay</h4>
-                <p>A world-renowned surf destination with pristine beaches and vibrant nightlife.</p>
+                <img src="images/liptons_seat.jpg" alt="Lipton's Seat">
+                <h4>Lipton's Seat</h4>
+                <p>Enjoy panoramic views of tea plantations from this famous viewpoint.</p>
             </div>
-     
         </div>
     </div>
 
-    <!-- North Central Province Section -->
+    <!-- Western Province Section -->
     <div class="province-section">
-        <h2 class="province-header">North Central Province</h2>
+        <h2 class="province-header">Western Province</h2>
         <p class="province-description">
-            North Central Province is home to Sri Lanka's ancient capitals, including Anuradhapura and Polonnaruwa, with numerous archaeological sites and historical monuments.
+            The Western Province is the commercial and administrative hub of Sri Lanka, home to the capital Colombo. It offers a mix of urban attractions, beautiful beaches, and cultural sites. From modern shopping malls to ancient temples, this province has something for everyone.
         </p>
 
         <div class="province-info">
             <h3>Top 5 Places to Visit</h3>
             <ul>
-                <li><strong>Anuradhapura</strong> - A UNESCO World Heritage city with ancient Buddhist temples and stupas.</li>
-                <li><strong>Sigiriya</strong> - An ancient rock fortress and one of Sri Lanka's most iconic landmarks.</li>
-                <li><strong>Polonnaruwa</strong> - A well-preserved ancient city with Buddhist monuments and ruins.</li>
-                <li><strong>Ritigala</strong> - An ancient monastery and nature reserve.</li>
-                <li><strong>Mihintale</strong> - The birthplace of Buddhism in Sri Lanka, with historical ruins and sacred sites.</li>
+                <li><strong>Colombo</strong> - The commercial capital with a mix of modern and colonial architecture.</li>
+                <li><strong>Mount Lavinia Beach</strong> - A popular beach near Colombo with a famous hotel.</li>
+                <li><strong>Kelaniya Raja Maha Vihara</strong> - An ancient Buddhist temple with historical significance.</li>
+                <li><strong>Gangaramaya Temple</strong> - A prominent temple in Colombo with a museum and library.</li>
+                <li><strong>Negombo</strong> - A coastal city known for its fishing industry and beach.</li>
             </ul>
         </div>
 
         <div class="province-info">
             <h3>Top 5 Hotels</h3>
             <ul>
-                <li><strong>Heritance Kandalama</strong> - A luxury hotel located by the Kandalama Lake with eco-friendly design.</li>
-                <li><strong>Fresco Water Villa</strong> - A charming resort overlooking the tranquil waters of the lake.</li>
-                <li><strong>Rajarata Hotel</strong> - A perfect base to explore Anuradhapura and its ancient sites.</li>
-                <li><strong>Lake View Hotel</strong> - A serene getaway near the Anuradhapura Lake.</li>
-                <li><strong>Wildlife Resort</strong> - A unique experience near the Minneriya National Park, perfect for nature lovers.</li>
+                <li><strong>Galle Face Hotel</strong> - A historic colonial-era hotel in Colombo.</li>
+                <li><strong>Shangri-La Colombo</strong> - A luxury hotel offering panoramic views of the Indian Ocean.</li>
+                <li><strong>Mount Lavinia Hotel</strong> - A heritage hotel with direct beach access.</li>
+                <li><strong>Cinnamon Grand Colombo</strong> - A luxury hotel in the heart of Colombo.</li>
+                <li><strong>Jetwing Beach</strong> - A beachfront hotel in Negombo with modern amenities.</li>
             </ul>
         </div>
 
         <!-- Province Cards for Places -->
         <div class="province-cards">
             <div class="province-card">
-                <img src="images/anuradhapura.jpg" alt="Anuradhapura">
-                <h4>Anuradhapura</h4>
-                <p>A historic city with sacred Buddhist sites, ancient temples, and stunning ruins.</p>
+                <img src="images/colombo_city.jpg" alt="Colombo City">
+                <h4>Colombo City</h4>
+                <p>Explore the vibrant capital with its mix of modern and colonial architecture.</p>
             </div>
             <div class="province-card">
-                <img src="images/sigiriya.jpg" alt="Sigiriya">
-                <h4>Sigiriya</h4>
-                <p>Explore the ancient rock fortress, a UNESCO World Heritage site and one of Sri Lanka's most iconic landmarks.</p>
+                <img src="images/mount_lavinia.jpg" alt="Mount Lavinia Beach">
+                <h4>Mount Lavinia Beach</h4>
+                <p>Relax on this popular beach just a short drive from Colombo city center.</p>
             </div>
             <div class="province-card">
-                <img src="images/polonnaruwa.jpg" alt="Polonnaruwa">
-                <h4>Polonnaruwa</h4>
-                <p>Visit the UNESCO-listed ancient city, known for its preserved ruins and historical significance.</p>
+                <img src="images/gangaramaya.jpg" alt="Gangaramaya Temple">
+                <h4>Gangaramaya Temple</h4>
+                <p>Visit this important Buddhist temple with its unique architecture and museum.</p>
             </div>
-        
         </div>
     </div>
 
-    <!-- Footer Section -->
+  <!-- Footer Section -->
     <footer class="footer">
-        <h3>Contact Us</h3>
+        <h3>TravelHive</h3>
         <ul class="footer-links">
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Terms of Service</a></li>
             <li><a href="#">FAQ</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog</a></li>
         </ul>
         <div class="footer-socials">
             <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
             <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
         </div>
-        <p>&copy; 2023 Travel Website. All rights reserved.</p>
+        <p>&copy; 2025 TravelHive. All rights reserved. | Designed with ❤️ for travelers</p>
     </footer>
 
     <script>
